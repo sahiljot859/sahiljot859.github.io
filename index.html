@@ -66,18 +66,3 @@
   /* Small screens */
   @media (max-width: 420px) { .btn-grid { grid-template-columns: repeat(2, 1fr); } }
         </style>
-const apiKey = "a560618e77869a81651b54c8f78fc2ca"; 
-const city = "Mansa";  // <-- change this to your city/village
-
-async function getWeather() {
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-  const res = await fetch(url);
-  const data = await res.json();
-  if(data.cod === 200){
-    showWeather(data);
-  } else {
-    alert("City not found!");
-  }
-}
-
-getWeather(); // run once automatically
