@@ -34,3 +34,35 @@
   </script>
 </body>
 </html>
+<!-- Emergency Call Bar -->
+<div class="emergency-wrap">
+  <div class="emergency-card">
+    <h2>🚨 Emergency</h2>
+    <a class="btn btn-primary" href="tel:112" aria-label="Call 112">Call 112 (All-in-one)</a>
+
+    <div class="btn-grid">
+      <a class="btn" href="tel:100" aria-label="Call Police 100">Police 100</a>
+      <a class="btn" href="tel:101" aria-label="Call Fire 101">Fire 101</a>
+      <a class="btn" href="tel:102" aria-label="Call Ambulance 102">Ambulance 102</a>
+      <a class="btn" href="tel:108" aria-label="Call Ambulance 108">Ambulance 108</a>
+    </div>
+
+    <p class="note">Tip: 112 works across India for Police/Fire/Ambulance.</p>
+  </div>
+        </div>
+        <style>
+  .emergency-wrap { position: fixed; bottom: 12px; left: 12px; right: 12px; z-index: 9999; }
+  .emergency-card {
+    background: #fff; border-radius: 16px; padding: 14px;
+    box-shadow: 0 8px 24px rgba(0,0,0,.15); border: 2px solid #ffdad6;
+  }
+  .emergency-card h2 { margin: 0 0 8px 0; font-size: 18px; }
+  .btn { display: inline-block; text-align: center; padding: 10px 12px; border-radius: 10px; border: 1px solid #ddd; text-decoration: none; font-weight: 600; }
+  .btn + .btn { margin-left: 8px; }
+  .btn-primary { background: #e53935; color: #fff; border-color: #e53935; display: block; margin-bottom: 10px; }
+  .btn-primary:active, .btn:active { transform: scale(0.98); }
+  .btn-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+  .note { margin: 8px 0 0 0; font-size: 12px; color: #444; }
+  /* Small screens */
+  @media (max-width: 420px) { .btn-grid { grid-template-columns: repeat(2, 1fr); } }
+        </style>
