@@ -5,178 +5,238 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>ਪਰਾਲੀ ਪ੍ਰਬੰਧਨ 2025 — ਜਿਲ੍ਹਾ ਮਾਨਸਾ</title>
 
-  <!-- Optional: Google font for Punjabi-friendly rendering -->
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Gurmukhi:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
-    :root{
-      --accent:#0b6fb8;
-      --accent-dark:#095a8f;
-      --muted:#6b7280;
-      --card:#ffffff;
-      --bg:linear-gradient(180deg,#f7fbff,#ffffff);
-      --radius:12px;
+    :root {
+      --accent: #0b6fb8;
+      --accent-dark: #094b82;
+      --danger: #e63946;
+      --muted: #444;
+      --radius: 14px;
     }
-    html,body{height:100%;margin:0;font-family:"Noto Sans Devanagari",system-ui,-apple-system,"Segoe UI",Roboto,Arial;background:var(--bg);color:#072036;-webkit-font-smoothing:antialiased;}
-    .wrap{max-width:900px;margin:0 auto;padding:18px;}
-    /* Header */
-    header{background:var(--accent);color:#fff;border-radius:var(--radius);padding:18px;box-shadow:0 8px 24px rgba(11,111,184,.12);display:flex;flex-direction:column;gap:8px;}
-    .title-1{font-size:20px;font-weight:700;line-height:1.05;text-align:center;}
-    .title-2{font-size:14px;opacity:0.95;text-align:center;}
-    .meta{font-size:13px;text-align:center;opacity:.95;}
-    /* Main card */
-    .card{background:var(--card);border-radius:12px;padding:16px;margin-top:14px;box-shadow:0 6px 18px rgba(2,6,23,.06);}
-    h2{margin:0 0 8px 0;font-size:18px;}
-    p{margin:0 0 10px 0;color:var(--muted);line-height:1.5;}
-    .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px;}
-    .btn{background:var(--accent);color:#fff;padding:10px 12px;border-radius:10px;text-decoration:none;font-weight:600;display:inline-block;}
-    .btn.secondary{background:#eef6fb;color:var(--accent);border:1px solid rgba(11,111,184,.12)}
-    .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
-    .info{padding:12px;border-radius:10px;border:1px solid #eef3f8;background:linear-gradient(180deg,#ffffff,#fbfdff);}
-    .small{font-size:13px;color:var(--muted)}
-    /* Emergency bar */
-    .emergency{position:fixed;left:12px;right:12px;bottom:12px;background:#ff4646;color:#fff;padding:12px;border-radius:12px;box-shadow:0 8px 28px rgba(255,70,70,.18);display:flex;justify-content:space-between;align-items:center;gap:10px;z-index:9999;}
-    .emergency a{color:#fff;text-decoration:none;font-weight:700;padding:8px 10px;border-radius:8px;background:rgba(255,255,255,0.08)}
-    /* responsive */
-    @media (max-width:720px){
-      .grid{grid-template-columns:1fr;}
-      .title-1{font-size:18px}
+
+    body {
+      margin: 0;
+      font-family: "Noto Sans Gurmukhi", sans-serif;
+      background: #f8fafc;
+      color: #072036;
     }
-    footer{margin:24px 0 80px 0;text-align:center;color:var(--muted);font-size:13px;}
+
+    .wrap {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 18px;
+    }
+
+    /* Hero / Header */
+    header {
+      background: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      color: #fff;
+      border-radius: var(--radius);
+      padding: 70px 18px;
+      text-align: center;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, .3);
+      position: relative;
+      overflow: hidden;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+      border-radius: var(--radius);
+    }
+    header h1, header h2, header p {
+      position: relative;
+      z-index: 2;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 32px;
+      font-weight: 700;
+    }
+    header h2 {
+      margin: 6px 0 0;
+      font-size: 18px;
+      font-weight: 500;
+      opacity: 0.95;
+    }
+    header p {
+      margin-top: 8px;
+      font-size: 14px;
+    }
+
+    /* Card Style */
+    .card {
+      background: #ffffff;
+      border-radius: var(--radius);
+      padding: 20px;
+      margin-top: 20px;
+      box-shadow: 0 6px 18px rgba(2, 6, 23, .08);
+    }
+    .card h2 {
+      font-size: 20px;
+      margin-top: 0;
+      color: var(--accent-dark);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .card p {
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* Grid Cards */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 12px;
+    }
+    .info {
+      background: url('https://images.unsplash.com/photo-1560785496-3c9f7d68b77e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80') center/cover no-repeat;
+      padding: 16px;
+      border-radius: var(--radius);
+      border: 1px solid #eef2f8;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+    .info::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.45);
+      border-radius: var(--radius);
+    }
+    .info strong, .info p {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Buttons */
+    .btn {
+      background: var(--accent);
+      color: #fff;
+      padding: 10px 14px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: var(--accent-dark);
+    }
+    .btn.secondary {
+      background: #eef6fb;
+      color: var(--accent);
+      border: 1px solid rgba(11,111,184,.15);
+    }
+
+    /* Emergency Bar */
+    .emergency {
+      position: fixed;
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      background: var(--danger);
+      color: #fff;
+      padding: 14px;
+      border-radius: var(--radius);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 8px 24px rgba(230,57,70,.25);
+      z-index: 9999;
+    }
+    .emergency strong {
+      font-size: 15px;
+    }
+    .emergency a {
+      background: rgba(255,255,255,0.15);
+      padding: 8px 12px;
+      border-radius: 8px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* Footer */
+    footer {
+      margin: 40px 0 90px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+    }
   </style>
 </head>
 <body>
   <div class="wrap">
-    <!-- Header with Punjabi text -->
+    <!-- Header -->
     <header>
-      <div class="title-1">ਪਰਾਲੀ ਪ੍ਰਬੰਧਨ 2025</div>
-      <div class="title-2">ਜਿਲ੍ਹਾ ਮਾਨਸਾ</div>
-      <div class="meta small">ਕਿਰਪਾ ਕਰਕੇ ਹੇਠਾਂ ਦਿੱਤੇ ਨਿਰਦੇਸ਼ ਪੜ੍ਹੋ — ਖੇਤਾਂ ਦੀ ਸੁਰੱਖਿਆ ਅਤੇ ਪ੍ਰਭਾਵਸ਼ਾਲੀ ਪਰਾਲੀ ਪ੍ਰਬੰਧਨ ਲਈ</div>
+      <h1>ਪਰਾਲੀ ਪ੍ਰਬੰਧਨ 2025</h1>
+      <h2>ਜਿਲ੍ਹਾ ਮਾਨਸਾ</h2>
+      <p>ਖੇਤਾਂ ਦੀ ਸੁਰੱਖਿਆ ਅਤੇ ਪ੍ਰਭਾਵਸ਼ਾਲੀ ਪਰਾਲੀ ਪ੍ਰਬੰਧਨ ਲਈ ਨਿਰਦੇਸ਼</p>
     </header>
 
-    <!-- Intro / About -->
-    <div class="card" style="margin-top:14px;">
-      <h2>About / ਪਰਿਚਯ</h2>
-      <p>ਇਹ ਸਾਈਟ ਪਰਾਲੀ ਪ੍ਰਬੰਧਨ (stubble management) ਲਈ ਸਥਾਨਕ ਜਾਣਕਾਰੀ, ਸੰਪਰਕ ਨੰਬਰ ਅਤੇ ਕਾਰਗਰ ਤਰੀਕੇ ਪ੍ਰਦਾਨ ਕਰਦੀ ਹੈ। ਕਿਸਾਨਾਂ ਨੂੰ ਸੁਰੱਖਿਅਤ, ਕਾਨੂੰਨੀ ਅਤੇ ਪਰਿਆਵਰਣ-ਵਾਨ ਅਭਿਆਸਾਂ ਲਈ ਸਹਾਇਤਾ ਦਿੱਤੀ ਜਾਵੇਗੀ।</p>
-
-      <div class="row">
-        <a class="btn" href="#practices">ਸਿੱਖੋ - ਪ੍ਰਯੋਗ (Practices)</a>
-        <a class="btn secondary" href="#report">ਖੇਤਰ ਰਿਪੋਰਟ ਕਰੋ (Report Field)</a>
+    <!-- About -->
+    <div class="card">
+      <h2><i class="fas fa-leaf"></i> ਪਰਿਚਯ</h2>
+      <p>ਇਹ ਸਾਈਟ ਪਰਾਲੀ ਪ੍ਰਬੰਧਨ ਲਈ ਜਾਣਕਾਰੀ, ਸੰਪਰਕ ਨੰਬਰ ਅਤੇ ਕਾਰਗਰ ਤਰੀਕੇ ਪ੍ਰਦਾਨ ਕਰਦੀ ਹੈ। ਕਿਸਾਨਾਂ ਨੂੰ ਸੁਰੱਖਿਅਤ, ਕਾਨੂੰਨੀ ਅਤੇ ਪਰਿਆਵਰਣ-ਵਾਨ ਅਭਿਆਸਾਂ ਲਈ ਸਹਾਇਤਾ ਮਿਲੇਗੀ।</p>
+      <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap;">
+        <a class="btn" href="#practices">ਸਿੱਖੋ - ਤਰੀਕੇ</a>
+        <a class="btn secondary" href="#report">ਰਿਪੋਰਟ ਭੇਜੋ</a>
       </div>
     </div>
 
-    <!-- Practical steps -->
+    <!-- Best Practices -->
     <div class="card" id="practices">
-      <h2>Best Practices / ਕਾਰਗਰ ਤਰੀਕੇ</h2>
+      <h2><i class="fas fa-tractor"></i> ਕਾਰਗਰ ਤਰੀਕੇ</h2>
       <div class="grid">
-        <div class="info">
-          <strong>1. Incorporation / ਮਿੱਟੀ ਵਿਚ ਮਿਲਾਓ</strong>
-          <p class="small">ਪਰਾਲੀ ਨੂੰ ਮਿੱਟੀ ਵਿਚ ਮਿਲਾਉਣ ਨਾਲ ਮਿੱਟੀ ਨੂੰ ਪੋਸ਼ਣ ਮਿਲਦੇ ਹਨ ਅਤੇ ਖੇਤੀ ਦੀ ਉਪਜ ਵਿੱਚ ਸੁਧਾਰ ਆਉਂਦਾ ਹੈ।</p>
-        </div>
-        <div class="info">
-          <strong>2. Happy Seeder / ਹੈਪੀ ਸੀਡਰ</strong>
-          <p class="small">ਹੈਪੀ ਸੀਡਰ ਦੀ ਵਰਤੋਂ ਨਾਲ ਪਰਾਲੀ ਰਹਿਤ ਬੀਜਾਈ ਸੰਭਵ ਹੈ — ਇਹ ਪ੍ਰਾਥਮਿਕ ਵਿਕਲਪ ਹੈ।</p>
-        </div>
-
-        <div class="info">
-          <strong>3. Alternative Uses / ਵਿਕਲਪਿਕ ਉਪਯੋਗ</strong>
-          <p class="small">ਪਰਾਲੀ ਬਾਇਓਮੈਸ, ਕੰਪੋਸਟ, ਭੱਪੀਆਂ ਸਮੱਗਰੀ ਵਗੈਰਾ ਲਈ ਵਰਤੀ ਜਾ ਸਕਦੀ ਹੈ।</p>
-        </div>
-        <div class="info">
-          <strong>4. Controlled Burning — Not Recommended / ਜਾੜਮ:</strong>
-          <p class="small">ਕੰਟਰੋਲਡ ਬਰਨਿੰਗ ਨਾ ਕਰੋ — ਆਗ ਅਤੇ ਮੌਸਮੀ ਹੋਣ ਦੇ ਖਤਰੇ ਨਾਲ ਨਾਲ ਕਾਨੂੰਨੀ ਪਾਬੰਦੀਆਂ ਵੀ ਹਨ।</p>
-        </div>
+        <div class="info"><strong>ਮਿੱਟੀ ਵਿਚ ਮਿਲਾਓ</strong><p>ਪਰਾਲੀ ਨੂੰ ਮਿੱਟੀ ਵਿਚ ਮਿਲਾਉਣ ਨਾਲ ਮਿੱਟੀ ਨੂੰ ਪੋਸ਼ਣ ਮਿਲਦੇ ਹਨ।</p></div>
+        <div class="info"><strong>ਹੈਪੀ ਸੀਡਰ</strong><p>ਹੈਪੀ ਸੀਡਰ ਨਾਲ ਬਿਨਾਂ ਪਰਾਲੀ ਸਾੜੇ ਬੀਜਾਈ ਸੰਭਵ ਹੈ।</p></div>
+        <div class="info"><strong>ਵਿਕਲਪਿਕ ਉਪਯੋਗ</strong><p>ਪਰਾਲੀ ਬਾਇਓਮੈਸ, ਕੰਪੋਸਟ, ਚਾਰੇ ਵਜੋਂ ਵਰਤੀ ਜਾ ਸਕਦੀ ਹੈ।</p></div>
+        <div class="info"><strong>ਅੱਗ ਨਾ ਲਗਾਓ</strong><p>ਅੱਗ ਲਗਾਉਣ ਨਾਲ ਕਾਨੂੰਨੀ ਕਾਰਵਾਈ ਅਤੇ ਵਾਤਾਵਰਣ ਨੂੰ ਨੁਕਸਾਨ ਹੁੰਦਾ ਹੈ।</p></div>
       </div>
     </div>
 
-    <!-- Report form -->
+    <!-- Report -->
     <div class="card" id="report">
-      <h2>Report Stubble / ਖੇਤਰ ਦੀ ਰਿਪੋਰਟ ਕਰੋ</h2>
-      <p class="small">ਆਪਣਾ ਖੇਤ ਰਿਪੋਰਟ ਕਰਨ ਲਈ ਹੇਠਾਂ ਫਾਰਮ ਭਰੋ — ਇਹ ਡਾਟਾ ਤੁਹਾਡੇ ਕੇ ਲਈ ਬਰਕਰਾਰ ਨਹੀਂ ਕੀਤਾ ਜਾਵੇਗਾ ਪਰ ਅਧਿਕਾਰੀਆਂ ਨੂੰ ਸੂਚਿਤ ਕਰਨ ਲਈ ਥਾਣੇ/ਬਲਾਕਾਂ ਨੂੰ ਦਿੱਤਾ ਜਾ ਸਕਦਾ ਹੈ।</p>
-
-      <label class="small">ਖੇਤ ਦਾ ਨਾਂ / Village / Field name</label>
-      <input id="fieldName" type="text" placeholder="ਊਦਾਹਰਨ: ਖੇਤ ਨੰਬਰ 24 (optional)" style="width:100%;padding:10px;margin:6px 0;border-radius:8px;border:1px solid #e6eef8;" />
-
-      <label class="small">Latitude,Longitude (optional)</label>
-      <input id="coords" type="text" placeholder="ex: 29.94381,75.26832" style="width:100%;padding:10px;margin:6px 0;border-radius:8px;border:1px solid #e6eef8;" />
-
-      <label class="small">ਉਸ ਸਥਾਨ ਬਾਰੇ ਵਿਆਖਿਆ (optional)</label>
-      <textarea id="notes" rows="3" placeholder="ਥੋੜ੍ਹੀ ਜਾਣਕਾਰੀ..." style="width:100%;padding:10px;margin:6px 0;border-radius:8px;border:1px solid #e6eef8;"></textarea>
-
-      <div style="display:flex;gap:8px;margin-top:8px;">
-        <button class="btn" id="saveBtn">Save locally</button>
-        <a class="btn secondary" id="emailBtn" href="#">Email report</a>
+      <h2><i class="fas fa-file-alt"></i> ਰਿਪੋਰਟ ਭੇਜੋ</h2>
+      <p style="font-size:14px;">ਆਪਣਾ ਖੇਤ ਰਿਪੋਰਟ ਕਰਨ ਲਈ ਹੇਠਾਂ ਵੇਰਵਾ ਭਰੋ:</p>
+      <input type="text" placeholder="ਖੇਤ ਦਾ ਨਾਂ" style="width:100%;padding:10px;margin:8px 0;border-radius:8px;border:1px solid #ccc;">
+      <input type="text" placeholder="Latitude,Longitude (optional)" style="width:100%;padding:10px;margin:8px 0;border-radius:8px;border:1px solid #ccc;">
+      <textarea rows="3" placeholder="ਥੋੜ੍ਹੀ ਜਾਣਕਾਰੀ..." style="width:100%;padding:10px;margin:8px 0;border-radius:8px;border:1px solid #ccc;"></textarea>
+      <div style="margin-top:10px;display:flex;gap:10px;">
+        <a class="btn" href="#">Save</a>
+        <a class="btn secondary" href="#">Email</a>
       </div>
-
-      <p class="small" style="margin-top:8px;">ਸੰਭਾਲ: ਜੇ ਤੁਸੀਂ ਸਰਕਾਰੀ ਅਧਿਕਾਰੀਆਂ ਨੂੰ ਰਿਪੋਰਟ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ ਤਾਂ ਈਮੇਲ ਬਟਨ ਵਿੱਚ ਮੌਜੂਦਾ ਵੇਰਵਾ ਲਿਓ।</p>
     </div>
 
-    <!-- Contacts / Resources -->
-    <div class="card" id="contacts">
-      <h2>Nearby Contacts / ਸੰਪਰਕ</h2>
-      <p class="small"><strong>Block Agriculture Office, Mansa</strong><br/>Phone: <a href="tel:016752xxxx">01675-2XXXX</a></p>
-      <p class="small"><strong>Emergency (Police / Fire / Ambulance)</strong><br/>Call: <a href="tel:112">112</a></p>
-      <p class="small">For subsidies & equipment: visit local agriculture extension office.</p>
+    <!-- Contacts -->
+    <div class="card">
+      <h2><i class="fas fa-phone-alt"></i> ਸੰਪਰਕ</h2>
+      <p><strong>Block Agriculture Office, Mansa</strong><br/>📞 01675-2XXXX</p>
+      <p><strong>ਐਮਰਜੈਂਸੀ</strong><br/>📞 <a href="tel:112">112</a></p>
     </div>
 
     <footer>
-      © 2025 ਪਰਾਲੀ ਪ੍ਰਬੰਧਨ — ਜਿਲ੍ਹਾ ਮਾਨਸਾ · Designed for farmers & extension workers
+      © 2025 ਪਰਾਲੀ ਪ੍ਰਬੰਧਨ — ਜਿਲ੍ਹਾ ਮਾਨਸਾ · Developed for Farmers
     </footer>
   </div>
 
-  <!-- Emergency call bar (mobile-friendly) -->
-  <div class="emergency" role="region" aria-label="Emergency">
-    <div style="font-weight:700">ਐਮਰਜੈਂਸੀ / Emergency</div>
-    <div style="display:flex;gap:8px">
-      <a href="tel:112">Call 112</a>
-      <a href="tel:016752xxxx">Block Office</a>
+  <!-- Emergency Fixed Bar -->
+  <div class="emergency">
+    <strong><i class="fas fa-exclamation-triangle"></i> ਐਮਰਜੈਂਸੀ</strong>
+    <div style="display:flex;gap:8px;">
+      <a href="tel:112"><i class="fas fa-phone"></i> 112</a>
     </div>
   </div>
-
-  <script>
-    // Simple local save + email functionality for the Report form
-    const saveBtn = document.getElementById('saveBtn');
-    const emailBtn = document.getElementById('emailBtn');
-
-    function getFormData(){
-      return {
-        field: document.getElementById('fieldName').value.trim(),
-        coords: document.getElementById('coords').value.trim(),
-        notes: document.getElementById('notes').value.trim(),
-        time: new Date().toISOString()
-      };
-    }
-
-    saveBtn.addEventListener('click', ()=>{
-      const data = getFormData();
-      if(!data.field && !data.coords && !data.notes){
-        alert('ਕਿਰਪਾ ਕਰਕੇ ਘੱਟੋ-ਘੱਟ ਇੱਕ ਫੀਲਡ ਭਰੋ (field name / coords / notes).');
-        return;
-      }
-      // save to localStorage
-      const key = 'stubble_reports_v1';
-      const arr = JSON.parse(localStorage.getItem(key) || '[]');
-      arr.push(data);
-      localStorage.setItem(key, JSON.stringify(arr));
-      alert('Report saved locally. You can email it to authorities using the Email report button.');
-      // clear fields
-      document.getElementById('fieldName').value='';
-      document.getElementById('coords').value='';
-      document.getElementById('notes').value='';
-    });
-
-    emailBtn.addEventListener('click', (e)=>{
-      e.preventDefault();
-      const data = getFormData();
-      const subject = encodeURIComponent('Stubble report — Mansa');
-      const body = encodeURIComponent(
-        `Field: ${data.field}\nCoordinates: ${data.coords}\nNotes: ${data.notes}\nTime: ${data.time}\n\n(Report sent from Stubble Management site)`
-      );
-      // change the email address to the relevant local authority
-      const mailto = `mailto:agri-mansa@example.com?subject=${subject}&body=${body}`;
-      // open mail client
-      window.location.href = mailto;
-    });
-  </script>
 </body>
-</html>
+          </html>
